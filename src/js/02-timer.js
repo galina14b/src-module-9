@@ -3,6 +3,7 @@ import "flatpickr/dist/flatpickr.min.css";
 
 let isFuture = false;
 const startBtn = document.querySelector('button[data-start]');
+let chosenDate = null;
 
 const options = {
   enableTime: true,
@@ -10,7 +11,7 @@ const options = {
   defaultDate: new Date(),
   minuteIncrement: 1,
   onClose(selectedDates) {
-    todayDate = new Date().getTime();
+    let todayDate = new Date().getTime();
     chosenDate = selectedDates[0].getTime();
     if (todayDate <= chosenDate) {
       isFuture = true;

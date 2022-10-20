@@ -3,11 +3,11 @@ const stepEl = document.querySelector('input[name="step"]');
 const amountEl = document.querySelector('input[name="amount"]');
 const form = document.querySelector('form');
 
-form.addEventListener('submit', function (e) {
+form.addEventListener('submit', function(e) {
   e.preventDefault();
-  delay = +delayEl.value;
-  step = +stepEl.value;
-  amount = +amountEl.value;
+  let delay = +delayEl.value;
+  let step = +stepEl.value;
+  let amount = +amountEl.value;
   delayEl.value = '';
   stepEl.value = '';
   amountEl.value = '';
